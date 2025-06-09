@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="education.css">
+    <title>Education - Appu's Portfolio</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Appu</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <!-- <a href="services.html">Services</a> -->
+            <a href="skills.html">Skills</a>
+            <a href="education.html" class="active">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="theme-switcher">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <section class="education">
+        <h2 class="section-title">My Education Journey</h2>
+        <div class="education-container">
+            <div class="education-card">
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="education-content">
+                    <div class="education-header">
+                        <h3>B.Tech in Artificial Intelligence and Machine Learning</h3>
+                        <span class="education-year">2022 - 2026</span>
+                    </div>
+                    <div class="education-details">
+                        <div class="institution">
+                            <i class="fas fa-university"></i>
+                            <span>Brindavan College of Engineering, Bengaluru</span>
+                        </div>
+                        <div class="affiliation">
+                            <i class="fas fa-link"></i>
+                            <span>VTU Affiliated</span>
+                        </div>
+                        <div class="cgpa">
+                            <i class="fas fa-star"></i>
+                            <span>CGPA: 8.2/10</span>
+                        </div>
+                        <div class="graduation">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Expected Graduation: May 2026</span>
+                        </div>
+                    </div>
+                    <div class="education-description">
+                        <p>Currently pursuing my B.Tech degree with a focus on cutting-edge technologies in AI and ML. The curriculum includes advanced topics in machine learning, deep learning, computer vision, and natural language processing.</p>
+                    </div>
+                    <div class="education-progress">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 65%;">
+                                <span class="progress-text">65% Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline for future education entries -->
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2022</h4>
+                        <p>Started B.Tech Program</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2026</h4>
+                        <p>Expected Graduation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const themeSwitcher = document.querySelector('.theme-switcher');
+        const html = document.documentElement;
+        
+        themeSwitcher.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', savedTheme);
+    </script>
+</body>
+</html> 
