@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="experience.css">
+    <title>Experience - Portfolio</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Appu</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <!-- <a href="services.html">Services</a> -->
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html" class="active">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="theme-switcher">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <section class="experience">
+        <h2 class="section-title">My Experience & Projects</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="year">2022-23</div>
+                <div class="content">
+                    <h3>First Year Projects</h3>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h4>The Smart Bulb</h4>
+                            <p>A Home Automation Project that demonstrates the integration of IoT technology for smart home solutions.</p>
+                        </div>
+                        <div class="project-image">
+                            <img src="smart-bulb.jpg" alt="Smart Bulb Project">
+                            <!-- <span class="image-placeholder">smart-bulb.jpg</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="year">2023-24</div>
+                <div class="content">
+                    <h3>Second Year Projects</h3>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h4>Car Designers Website</h4>
+                            <p>A dedicated platform for automotive designers to showcase their work and connect with clients.</p>
+                            <span class="status">Under Progress</span>
+                        </div>
+                        <div class="project-image">
+                            <img src="car-design.jpg" alt="Car Designers Website">
+                            <!-- <span class="image-placeholder">car-design.jpg</span> -->
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h4>Football Enthusiasts Website</h4>
+                            <p>A community platform for football fans to share news, updates, and connect with fellow enthusiasts.</p>
+                            <span class="status">Under Progress</span>
+                        </div>
+                        <div class="project-image">
+                            <img src="football-site.jpg" alt="Football Enthusiasts Website">
+                            <!-- <span class="image-placeholder">football-site.jpg</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="year">2024-25</div>
+                <div class="content">
+                    <h3>Third Year Projects</h3>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h4>Omni Gloves</h4>
+                            <p>Gesture Controlled Gloves with multiple implementations:</p>
+                            <ul>
+                                <li>Gesture controlled robust vehicle</li>
+                                <li>Gesture controlled mouse interface</li>
+                            </ul>
+                        </div>
+                        <div class="project-image">
+                            <img src="omni-gloves.jpg" alt="Omni Gloves Project">
+                            <!-- <span class="image-placeholder">omni-gloves.jpg</span> -->
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h4>NOVA - AI Assistant</h4>
+                            <p>An advanced AI assistant designed to enhance desktop experience through intelligent automation and interaction.</p>
+                        </div>
+                        <div class="project-image">
+                            <img src="nova-ai.jpg" alt="NOVA AI Assistant">
+                            <!-- <span class="image-placeholder">nova-ai.jpg</span> -->
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h4>BrinHack Hackathon</h4>
+                            <p>Participated in the National level hackathon where our team developed Bank~Ease, a fully functional banking website solution.</p>
+                        </div>
+                        <div class="project-image">
+                            <img src="bank-ease.jpg" alt="Bank~Ease Project">
+                            <!-- <span class="image-placeholder">bank-ease.jpg</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="year">Future</div>
+                <div class="content">
+                    <h3>Upcoming Opportunities</h3>
+                    <div class="project-card">
+                        <h4>Fourth Year Projects</h4>
+                        <p>Coming soon...</p>
+                    </div>
+                    <div class="project-card">
+                        <h4>Internship Experience</h4>
+                        <p>Looking forward to gaining valuable industry experience...</p>
+                    </div>
+                    <div class="project-card">
+                        <h4>Work Experience</h4>
+                        <p>Ready to embark on professional journey...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const themeSwitcher = document.querySelector('.theme-switcher');
+        const html = document.documentElement;
+        
+        themeSwitcher.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            
+            // Save theme preference
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', savedTheme);
+    </script>
+</body>
+</html> 
